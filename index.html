@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sebastian Loyacono Portfolio</title>
   <link rel="icon" href="Initials Logo.png" type="image/png">
-         
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+       
   <style>
     /* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
@@ -159,6 +160,7 @@
     .dropdown-content a {
       color: white;
       padding: 10px 16px;
+      font-size: small;
       text-decoration: none;
       display: block;
     }
@@ -248,7 +250,7 @@
       }
     }
   </script>
-
+  
   <style>
     /* Class to toggle visibility */
     .show {
@@ -268,22 +270,23 @@
     <a href="#goals">Goals</a>
     <a href="#tech">Why I Like Technology</a>
     <!-- Projects Dropdown -->
-    <div class="dropdown" onclick="toggleProjectDropdown()">
-      <button class="dropbtn">Projects ▾</button>
+    <div class="dropdown">
+      <button data-target="projectDropdown" class="dropbtn">Projects ▾</button>
       <div class="dropdown-content" id="projectDropdown">
-        <a href="Pigs Rule.pdf" target="_blank">Snort</a>
-        <a href="Imperial memory.pdf" target="_blank">Memory Forensics</a>
+        <a href="Pigs Rule.pdf" ><i class="fa-solid fa-network-wired"></i> Snort</a>
+        <a href="Imperial memory.pdf"><i class="fa-solid fa-memory"></i> Memory Forensics</a>
         <!-- Add more links to your project pages here -->
       </div>
     </div>
-    <!-- TODO: this needs to be added to the repo-->
+    
     <!-- Certifications Dropdown -->
-    <div class="dropdown" onclick="toggleDropdown()">
-      <button class="dropbtn">Certifications ▾</button>
+    <div class="dropdown">
+      <button data-target="certDropdown" class="dropbtn">Certifications ▾</button>
       <div class="dropdown-content" id="certDropdown">
-        <a href="cert-google.html" target="_blank">Google Cybersecurity</a>
+        <a href="cert-google.html" target="_blank"><i class="fa-solid fa-shield-halved"></i> Google Cybersecurity</a>
       </div>
     </div>
+
     <a href="Sebastian L. Resume.pdf" download class="download-btn">Download My Resume</a>
   </nav>
 
@@ -349,6 +352,38 @@
   <footer>
     <p>&copy; 2025 Sebastian Loyacono. All rights reserved.</p>
   </footer>
+ 
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".dropbtn");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      event.stopPropagation();
+
+      const targetId = btn.getAttribute("data-target");
+      const dropdownToToggle = document.getElementById(targetId);
+
+      // Close all dropdowns first
+      document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+        if (dropdown !== dropdownToToggle) {
+          dropdown.classList.remove("show");
+        }
+      });
+
+      // Toggle the selected dropdown
+      dropdownToToggle.classList.toggle("show");
+    });
+  });
+
+  // Close dropdowns if clicked outside
+  window.addEventListener("click", function () {
+    document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+      dropdown.classList.remove("show");
+    });
+  });
+});
+</script>
 
 </body>
 
