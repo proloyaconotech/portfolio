@@ -4,10 +4,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Cybersecurity Portfolio</title>
+  <title>Sebastian Loyacono Portfolio</title>
+  <link rel="icon" href="Initials Logo.png" type="image/png">
+         
   <style>
+    /* Responsive adjustments for screens smaller than 768px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a,
+  .dropbtn {
+    display: block;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+}
+
     h1 {
-      
+      /* add to repo */
       font-size: 48px;
       font-weight: bold;
       color: #ccbfbf;
@@ -22,10 +59,10 @@
       margin-top: -10px;
     }
 
-    
+    /* TODO: add to repo */
   </style>
   <style>
-    
+    /* TODO: Add this to the repo */
     body {
       font-family: Arial, sans-serif;
       background-color: #d4d2d2;
@@ -45,10 +82,11 @@
 
     .download-btn:hover {
       background-color: #0056b3;
-    
+      /* TODO: Add this to the repo, finishes here */
     }
 
     body {
+      /* TODO: Add this to the repo, Backgrounds size and attachment */
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -60,6 +98,7 @@
 
     header {
       background-image: url('Background.png');
+      /* TODO: Add to the repo */
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -88,44 +127,45 @@
       font-weight: bold;
     }
 
-.dropdown {
-  display: inline-block;
-  position: relative;
-}
+    /* Dropdown Styles - Match nav font & layout */
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
 
-.dropbtn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 15px;
-  cursor: pointer;
-}
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-  z-index: 1;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  border-radius: 5px;
-}
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #444;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+      text-align: left;
+      top: 100%;
+      left: 0;
+      border-radius: 5px;
+    }
 
-.dropdown-content a {
-  color: white;
-  padding: 10px 16px;
-  text-decoration: none;
-  display: block;
-}
+    .dropdown-content a {
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
 
-.dropdown-content a:hover {
-  background-color: #555;
-}
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
 
     nav a:hover {
       text-decoration: underline;
@@ -168,34 +208,57 @@
 <body>
 
   <script>
-  function toggleDropdown() {
-    document.getElementById("certDropdown").classList.toggle("show");
-  }
+    function toggleDropdown() {
+      document.getElementById("certDropdown").classList.toggle("show");
+    }
 
-  // Close the dropdown if clicked outside
-  window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
+    // Close the dropdown if clicked outside
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
         }
       }
     }
-  }
-</script>
+  </script>
 
-<style>
-  
-  .show {
-    display: block;
-  }
-</style>
+  <script>
+    function toggleDropdown() {
+      document.getElementById("certDropdown").classList.toggle("show");
+    }
+
+    function toggleProjectDropdown() {
+      document.getElementById("projectDropdown").classList.toggle("show");
+    }
+
+    // Close dropdowns if clicked outside
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Class to toggle visibility */
+    .show {
+      display: block;
+    }
+  </style>
 
   <header>
     <h1>Sebastian Loyacono<h1>
-        <h3>Cybersecurity Student | Technician | IT Enthusiast<h3>
+        <h3>Cybersecurity Graduate | Technician | IT Enthusiast<h3>
             <img src="Proffessional pic.jpg" alt="Profile Photo" class="profile-pic" />
   </header>
 
@@ -204,15 +267,23 @@
     <a href="#experience">Work Experience</a>
     <a href="#goals">Goals</a>
     <a href="#tech">Why I Like Technology</a>
-    <a href="#projects">Projects</a>
+    <!-- Projects Dropdown -->
+    <div class="dropdown" onclick="toggleProjectDropdown()">
+      <button class="dropbtn">Projects ▾</button>
+      <div class="dropdown-content" id="projectDropdown">
+        <a href="Pigs Rule.pdf" target="_blank">Snort</a>
+        <a href="Imperial memory.pdf" target="_blank">Memory Forensics</a>
+        <!-- Add more links to your project pages here -->
+      </div>
+    </div>
     <!-- TODO: this needs to be added to the repo-->
-  <!-- Certifications Dropdown -->
-  <div class="dropdown" onclick="toggleDropdown()">
-  <button class="dropbtn">Certifications ▾</button>
-  <div class="dropdown-content" id="certDropdown">
-    <a href="cert3.html" target="_blank">Google Cybersecurity</a>
-  </div>
-  </div> 
+    <!-- Certifications Dropdown -->
+    <div class="dropdown" onclick="toggleDropdown()">
+      <button class="dropbtn">Certifications ▾</button>
+      <div class="dropdown-content" id="certDropdown">
+        <a href="cert-google.html" target="_blank">Google Cybersecurity</a>
+      </div>
+    </div>
     <a href="Sebastian L. Resume.pdf" download class="download-btn">Download My Resume</a>
   </nav>
 
@@ -273,15 +344,6 @@
       lines—helping organizations stay secure, identifying vulnerabilities before bad actors do, and ensuring that
       technology continues to serve people safely. That challenge and responsibility are what excite me most about this
       field.</p>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Project 1:</strong> Analyzed .vmem memory dump using strings and 7z</li>
-      <li><strong>Project 2:</strong> Linux forensic lab - password extraction with grep</li>
-      <!-- Add more as you complete new ones -->
-    </ul>
   </section>
 
   <footer>
