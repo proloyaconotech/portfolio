@@ -7,8 +7,18 @@
   <title>Sebastian Loyacono Portfolio</title>
   <link rel="icon" href="Initials Logo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-       
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+     
   <style>
+  
+  section {
+  background-color: rgba(0, 0, 0, 0.4); /* dark semi-transparent */
+  padding: 40px;
+  border-radius: 12px;
+  color: #030303;
+  text-shadow: 1px 1px 4px rgba(46, 45, 45, 0.7);
+}
+
     /* Responsive adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
   h1 {
@@ -182,7 +192,59 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+    /* === Contact Section === */
+#contact {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
 
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+}
+
+#contact button {
+  padding: 12px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#contact button:hover {
+  background-color: #008fcc;
+  transform: scale(1.03);
+}
     h2 {
       color: #302d2d;
       border-bottom: 5px solid #1a1a1a;
@@ -290,7 +352,7 @@
     <a href="Sebastian L. Resume.pdf" download class="download-btn">Download My Resume</a>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="slide-up">
     <h2>Who am I</h2>
     <p>I'm a highly motivated cybersecurity graduate currently making a transition into the IT industry. I come from a
       hands-on background as a technician, with experience working on enterprise-level physical security. Over time, I’ve been
@@ -301,7 +363,7 @@
     </p>
   </section>
 
-  <section id="experience">
+  <section id="experience" data-aos="slide-up">
     <h2>Work Experience</h2>
     <p>Over the course of my career, I’ve built a diverse background rooted in hands-on technical work and direct
       service. I began in the medical field, where I spent 12 years at the University of Miami in various roles—from CNA
@@ -323,7 +385,7 @@
     </p>
   </section>
 
-  <section id="goals">
+  <section id="goals" data-aos="slide-up">
     <h2>Goals & Expectations</h2>
     <p>At this stage in my career, my primary goal is continuous learning and skill development. I'm deeply committed to
       expanding my technical expertise, particularly in cybersecurity, cloud infrastructure, and network systems. I want
@@ -336,7 +398,7 @@
       IT professional</p>
   </section>
 
-  <section id="tech">
+  <section id="tech" data-aos="slide-up">
     <h2>Why I Like Technology</h2>
     <p>I’ve always been fascinated by how technology shapes the world around us, and I truly believe it’s the
       future—impacting everything from how we communicate to how we secure our most critical data. What draws me in most
@@ -348,6 +410,17 @@
       technology continues to serve people safely. That challenge and responsibility are what excite me most about this
       field.</p>
   </section>
+
+  <!-- Contact Section -->
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mjkrdrgq" method="POST">
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone (optional)">
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
 
   <footer>
     <p>&copy; 2025 Sebastian Loyacono. All rights reserved.</p>
@@ -384,7 +457,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+    
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // animation duration in ms
+    once: true       // animation only happens once
+  });
+</script>
+
+
 
 </body>
 
 </html>
+ 
