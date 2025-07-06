@@ -50,8 +50,6 @@ portfolio/
 
 ## 💡 Future Improvements
 
-- Externalize CSS and JS for easier maintenance
-- Add dark/light theme toggle
 - Add project cards with images and links
 - Add form validation & success message
 
@@ -73,5 +71,3 @@ If you’d like to get in touch, collaborate, or hire me:
 This project is open to showcase my work. Please don’t reuse or copy without permission.
 
 
-
-[def]: https://www.linkedin.com/in/sebastian-loyacono
