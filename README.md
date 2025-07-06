@@ -1,4 +1,4 @@
-# ProLoyaConoTech Portfolio Website 🌐
+# ProLoyaconoTech Portfolio Website 🌐
 
 Welcome to my personal portfolio site — designed and developed to showcase my journey in **IT and Cybersecurity**, highlight my **certifications**, display **projects**, and provide a way to connect professionally.
 
