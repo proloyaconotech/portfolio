@@ -8,7 +8,8 @@
   <link rel="icon" href="assets/images/Initials Logo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-     
+  <link rel="apple-touch-icon" href="assets/images/Initials Logo.png">
+   
   <style>
   
   section {
@@ -48,9 +49,11 @@
     margin: 10px;
   }
 
-  .profile-pic {
+   .profile-pic {
     width: 180px;
     height: 180px;
+    display: block;
+    margin: 10px auto;
   }
 }
 
@@ -85,14 +88,16 @@
       display: inline-block;
       padding: 4px 10px;
       background-color: #007bff;
+      font-weight: bold;
       color: white;
-      text-decoration: none;
+      text-decoration: floralwhite;
       border-radius: 5px;
       margin-top: 20px;
     }
 
     .download-btn:hover {
       background-color: #0056b3;
+      transform: scale(1.05);
      
     }
 
@@ -273,48 +278,6 @@
 </head>
 
 <body>
-
-  <script>
-    function toggleDropdown() {
-      document.getElementById("certDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if clicked outside
-    window.onclick = function (event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-  </script>
-
-  <script>
-    function toggleDropdown() {
-      document.getElementById("certDropdown").classList.toggle("show");
-    }
-
-    function toggleProjectDropdown() {
-      document.getElementById("projectDropdown").classList.toggle("show");
-    }
-
-    // Close dropdowns if clicked outside
-    window.onclick = function (event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-  </script>
   
   <style>
     /* Class to toggle visibility */
@@ -324,23 +287,20 @@
   </style>
 
   <header>
-    <h1>Sebastian Loyacono<h1>
-        <h3>Cybersecurity Graduate | Technician | IT Enthusiast<h3>
+    <h1>Sebastian Loyacono</h1>
+        <h3>Cybersecurity Graduate | Technician | IT Enthusiast</h3>
             <img src="assets/images/Proffessional pic.jpg" alt="Profile Photo" class="profile-pic" />
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#experience">Work Experience</a>
-    <a href="#goals">Goals</a>
-    <a href="#tech">Why I Like Technology</a>
     <!-- Projects Dropdown -->
     <div class="dropdown">
       <button data-target="projectDropdown" class="dropbtn">Projects ▾</button>
       <div class="dropdown-content" id="projectDropdown">
-        <a href="assets/PDF/Pigs Rule.pdf" ><i class="fa-solid fa-network-wired"></i> Snort</a>
-        <a href="assets/PDF/Imperial memory.pdf"><i class="fa-solid fa-memory"></i> Memory Forensics</a>
-        <a href="assets/PDF/achievement-report (3).pdf"><i class= "fa-solid fa-network-wired"></i> Achievment Report </a>
+        <a href="assets/PDF/Pigs Rule.pdf" title="Snort PDF Report" target="_blank" ><i class="fa-solid fa-network-wired"></i> Snort</a>
+        <a href="assets/PDF/Imperial memory.pdf" title="Memory Forensics PDF Report" target="_blank"><i class="fa-solid fa-memory"></i> Memory Forensics</a>
+        <a href="assets/PDF/achievement-report (3).pdf" title="School Graph Report" target="_blank"><i class= "fa-solid fa-network-wired"></i> Achievment Report </a>
         <!-- Add more links to your project pages here -->
       </div>
     </div>
