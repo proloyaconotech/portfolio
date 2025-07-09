@@ -11,75 +11,75 @@
   <link rel="apple-touch-icon" href="assets/images/Initials Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-  
-  section {
-  background-color: rgba(27, 26, 26, 0.4); 
-  padding: 40px;
-  border-radius: 12px;
-  color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(19, 17, 17, 0.9);
-   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-}
-    
-@media (max-width: 768px) {
-  h1 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 16px;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  nav a,
-  .dropbtn {
-    display: block;
-    margin: 5px 0;
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  section {
-    padding: 20px;
-    margin: 10px;
-  }
-
-   .profile-pic {
-    width: 180px;
-    height: 180px;
-    display: block;
-    margin: 10px auto;
-  }
-}
-
-    h1 {
-     
-      font-size: 48px;
-      font-weight: bold;
-      color: #ccbfbf;
-      text-align: center;
+    section {
+      background-color: rgba(27, 26, 26, 0.4);
+      padding: 40px;
+      border-radius: 12px;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(19, 17, 17, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
     }
 
-    h3 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #928e8e;
-      text-align: center;
-      margin-top: -10px;
-    }
+    @media screen and (max-width: 768px) {
 
-    
+      /* Stack header content */
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header h1,
+      header h3 {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      header img.profile-pic {
+        width: 140px;
+        height: 140px;
+        margin: 10px 0;
+      }
+
+      /* Navigation to stack vertically */
+      nav {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      nav a,
+      .dropbtn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      /* Sections shrink padding */
+      section {
+        padding: 20px;
+        margin: 10px;
+        width: 100%;
+      }
+
+      #contact {
+        padding: 20px;
+        margin: 20px 10px;
+      }
+
+      .download-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }
   </style>
   <style>
-    
+  
     body {
       font-family: 'Montserrat', sans-serif;
       font-weight: normal;
@@ -102,11 +102,11 @@
     .download-btn:hover {
       background-color: #4a8a7b;
       transform: scale(1.05);
-     
+
     }
 
     body {
-      
+
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -116,97 +116,101 @@
       background-size: cover;
       background-attachment: fixed;
     }
+
     .overlay {
-  background-color: rgba(0, 0, 0, 0.4); /* This lowers contrast */
-  padding: 20px;
-  min-height: 100vh;
-}
-   header {
-  background: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: left;
-  padding: 40px 20px;
-  gap: 15px;
-  position: relative;
-  z-index: 100;
-}
+      background-color: rgba(0, 0, 0, 0.4);
+      /* This lowers contrast */
+      padding: 20px;
+      min-height: 100vh;
+    }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px 40px;
-  background: none; /* remove background image */
-}
+    header {
+      background: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: left;
+      padding: 40px 20px;
+      gap: 15px;
+      position: relative;
+      z-index: 100;
+    }
 
-header h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0;
-}
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 40px;
+      background: none;
+      /* remove background image */
+    }
 
-header img.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 10xp0;
-}
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
 
-header h3 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #ccc;
-  margin: 0;
-}
+    header img.profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 10xp0;
+    }
 
-nav {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: transparent;
-  z-index: 1000;
-}
+    header h3 {
+      font-size: 16px;
+      font-weight: 400;
+      color: #ccc;
+      margin: 0;
+    }
 
-nav a,
-.dropbtn {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px 12px;
-  transition: all 0.3s ease;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: transparent;
+      z-index: 1000;
+    }
 
-nav a:hover,
-.dropbtn:hover {
-  font-style: bold;
-}
+    nav a,
+    .dropbtn {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 12px;
+      transition: all 0.3s ease;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-nav a.active,
-.dropbtn.active {
-  font-weight: bold;
-}
+    nav a:hover,
+    .dropbtn:hover {
+      font-style: bold;
+    }
 
-/* Keep dropdown positioned under buttons */
-.dropdown {
-  position: relative;
-}
+    nav a.active,
+    .dropbtn.active {
+      font-weight: bold;
+    }
 
-.dropdown-content {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: auto;
-}
+    /* Keep dropdown positioned under buttons */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: auto;
+    }
 
     .dropdown {
       display: inline-block;
@@ -264,59 +268,60 @@ nav a.active,
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
-#contact {
-  background-color: rgba(78, 73, 73, 0.3);
-  padding: 40px;
-  border-radius: 16px;
-  margin-top: 80px;
-  margin-bottom: 60px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-}
 
-#contact h2 {
-  color: #c9c1c1;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-  border-bottom: 5px solid #1a1a1a;
-  padding-bottom: 10px;
-}
+    #contact {
+      background-color: rgba(78, 73, 73, 0.3);
+      padding: 40px;
+      border-radius: 16px;
+      margin-top: 80px;
+      margin-bottom: 60px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    }
 
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+    #contact h2 {
+      color: #c9c1c1;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      border-bottom: 5px solid #1a1a1a;
+      padding-bottom: 10px;
+    }
 
-#contact input,
-#contact textarea {
-  padding: 12px 16px;
-  border: none;
-  border-radius: 8px;
-  background-color: #1e1e1e;
-  color: #fff;
-  font-size: 1rem;
-  outline: none;
-  box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
-}
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-#contact button {
-  padding: 12px;
-  background-color: #00aaff;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
+    #contact input,
+    #contact textarea {
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+    }
 
-#contact button:hover {
-  background-color: #008fcc;
-  transform: scale(1.03);
-}
+    #contact button {
+      padding: 12px;
+      background-color: #00aaff;
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    #contact button:hover {
+      background-color: #008fcc;
+      transform: scale(1.03);
+    }
+
     h2 {
       color: #c9c1c1;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -344,177 +349,193 @@ nav a.active,
 
 <body>
   <div class="overlay">
-  <style>
-    /* Class to toggle visibility */
-    .show {
-      display: block;
-    }
-  </style>
+    <style>
+      /* Class to toggle visibility */
+      .show {
+        display: block;
+      }
+    </style>
 
-  <header>
-    <h1>Sebastian Loyacono</h1>
-        <h3>Cybersecurity Graduate | Technician | IT Enthusiast</h3>
-            <img src="assets/images/Proffessional pic.jpg" alt="Profile Photo" class="profile-pic" />
-  </header>
+    <header>
+      <h1>Sebastian Loyacono</h1>
+      <h3>Cybersecurity Graduate | Technician | IT Enthusiast</h3>
+      <img src="assets/images/Proffessional pic.jpg" alt="Profile Photo" class="profile-pic" />
+    </header>
 
-  <nav>
-    <a href="#about">About</a>
-    
+    <nav>
+      <a href="#about">About</a>
 
-    <div class="dropdown">
-      <button data-target="projectDropdown" class="dropbtn">Projects ▾</button>
-      <div class="dropdown-content" id="projectDropdown">
-        <a href="assets/PDF/Pigs Rule.pdf" title="Snort PDF Report" target="_blank" ><i class="fa-solid fa-network-wired"></i> Snort</a>
-        <a href="assets/PDF/Imperial memory.pdf" title="Memory Forensics PDF Report" target="_blank"><i class="fa-solid fa-memory"></i> Memory Forensics</a>
-        <a href="assets/PDF/achievement-report (3).pdf" title="School Graph Report" target="_blank"><i class= "fa-solid fa-network-wired"></i> Achievment Report </a>
-        <!-- Add more links to your project pages here -->
+
+      <div class="dropdown">
+        <button data-target="projectDropdown" class="dropbtn">Projects ▾</button>
+        <div class="dropdown-content" id="projectDropdown">
+          <a href="assets/PDF/Pigs Rule.pdf" title="Snort PDF Report" target="_blank"><i
+              class="fa-solid fa-network-wired"></i> Snort</a>
+          <a href="assets/PDF/Imperial memory.pdf" title="Memory Forensics PDF Report" target="_blank"><i
+              class="fa-solid fa-memory"></i> Memory Forensics</a>
+          <a href="assets/PDF/achievement-report (3).pdf" title="School Graph Report" target="_blank"><i
+              class="fa-solid fa-network-wired"></i> Achievment Report </a>
+          <!-- Add more links to your project pages here -->
+        </div>
       </div>
-    </div>
-    
-    <!-- Certifications Dropdown -->
-    <div class="dropdown">
-      <button data-target="certDropdown" class="dropbtn">Certifications ▾</button>
-      <div class="dropdown-content" id="certDropdown">
-        <a href="cert-google.html" target="_blank"><i class="fa-solid fa-shield-halved"></i> Google Cybersecurity</a>
+
+      <!-- Certifications Dropdown -->
+      <div class="dropdown">
+        <button data-target="certDropdown" class="dropbtn">Certifications ▾</button>
+        <div class="dropdown-content" id="certDropdown">
+          <a href="cert-google.html" target="_blank"><i class="fa-solid fa-shield-halved"></i> Google Cybersecurity</a>
+        </div>
       </div>
+
+      <a href="assets/PDF/Sebastian L. Resume.pdf" download class="download-btn">Download My Resume</a>
+    </nav>
+
+    <section id="about" data-aos="slide-up">
+      <h2>Who am I</h2>
+      <p>I'm a highly motivated cybersecurity graduate currently making a transition into the IT industry. I come from a
+        hands-on background as a technician, with experience working on enterprise-level physical security. Over time,
+        I’ve been
+        sharpening my technical skills through self-directed learning and home labs, focusing on virtual machines and
+        cloud management. I have a genuine passion for technology and continuous improvement, and I’m always eager to
+        learn and take on new challenges. I adapt quickly and thrive in fast-paced, dynamic environments, and I’m
+        excited
+        to contribute my growing expertise and strong troubleshooting abilities to a team where I can make an impact.
+      </p>
+    </section>
+
+    <section id="experience" data-aos="slide-up">
+      <h2>Work Experience</h2>
+      <p>Over the course of my career, I’ve built a diverse background rooted in hands-on technical work and direct
+        service. I began in the medical field, where I spent 12 years at the University of Miami in various roles—from
+        CNA
+        to administrative support—developing a strong foundation in protocols, attention to detail, and working in
+        high-pressure environments like operating rooms.
+        After more than a decade in healthcare, I decided it was time for a change. I’ve always had a curiosity for
+        technology, so I made a career pivot. I took on a locksmith role as a stepping stone, where I gained valuable
+        experience using tools, working with precision, and understanding physical security systems. That naturally led
+        me
+        into the low voltage field with DML Security, where I worked for six years planning and installing systems like
+        access control, surveillance, and network infrastructure. I managed wire runs, programmed IPs, maintained HOA
+        properties, and even helped train over 10 new technicians.
+        Along the way, I started to realize that my interest was evolving toward digital security. I saw how physical
+        and
+        digital security intersect, and that inspired me to dive deeper. I completed the Google Cybersecurity
+        Certificate
+        and a Cybersecurity course from the University of Miami to build my knowledge in IT and cybersecurity best
+        practices.
+        Unfortunately, due to a shift in management at DML, I felt my growth was limited, which pushed me to finally
+        make
+        the full leap into the IT world. Now, I’m excited and fully prepared to take on a new role as an IT
+        professional—bringing not just technical skills, but also adaptability, discipline, and a passion for security.
+      </p>
+    </section>
+
+    <section id="goals" data-aos="slide-up">
+      <h2>Goals & Expectations</h2>
+      <p>At this stage in my career, my primary goal is continuous learning and skill development. I'm deeply committed
+        to
+        expanding my technical expertise, particularly in cybersecurity, cloud infrastructure, and network systems. I
+        want
+        to be in an environment where I can absorb knowledge from experienced professionals, stay updated with evolving
+        technologies, and apply what I learn to real-world challenges.
+        In the long term, I aim to use my growing skill set to help small and medium-sized businesses adopt and
+        integrate
+        technology more effectively. I believe that with the right tools and guidance, these companies can operate more
+        securely, efficiently, and competitively. My expectation is to be part of a team that values innovation,
+        mentorship, and collaboration—where I can contribute meaningfully while continuing to grow into a strong,
+        reliable
+        IT professional</p>
+    </section>
+
+    <section id="tech" data-aos="slide-up">
+      <h2>Why I Like Technology</h2>
+      <p>I’ve always been fascinated by how technology shapes the world around us, and I truly believe it’s the
+        future—impacting everything from how we communicate to how we secure our most critical data. What draws me in
+        most
+        is how fast it evolves, and how there’s always something new to learn or improve.
+        Specifically, cybersecurity and ethical hacking have become a major focus for me. I see them as some of the most
+        valuable and in-demand skills of the 21st century. As we continue to rely more on digital systems, the need to
+        protect that information becomes not just important, but essential. I love the idea of being on the front
+        lines—helping organizations stay secure, identifying vulnerabilities before bad actors do, and ensuring that
+        technology continues to serve people safely. That challenge and responsibility are what excite me most about
+        this
+        field.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mjkrdrgq" method="POST">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone (optional)">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="https://www.linkedin.com/in/sebastian-loyacono" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"
+          width="32" height="32">
+      </a>
     </div>
 
-    <a href="assets/PDF/Sebastian L. Resume.pdf" download class="download-btn">Download My Resume</a>
-  </nav>
+    <footer>
+      <p>&copy; 2025 Sebastian Loyacono. All rights reserved.</p>
+    </footer>
 
-  <section id="about" data-aos="slide-up">
-    <h2>Who am I</h2>
-    <p>I'm a highly motivated cybersecurity graduate currently making a transition into the IT industry. I come from a
-      hands-on background as a technician, with experience working on enterprise-level physical security. Over time, I’ve been
-      sharpening my technical skills through self-directed learning and home labs, focusing on virtual machines and
-      cloud management. I have a genuine passion for technology and continuous improvement, and I’m always eager to
-      learn and take on new challenges. I adapt quickly and thrive in fast-paced, dynamic environments, and I’m excited
-      to contribute my growing expertise and strong troubleshooting abilities to a team where I can make an impact.
-    </p>
-  </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".dropbtn");
 
-  <section id="experience" data-aos="slide-up">
-    <h2>Work Experience</h2>
-    <p>Over the course of my career, I’ve built a diverse background rooted in hands-on technical work and direct
-      service. I began in the medical field, where I spent 12 years at the University of Miami in various roles—from CNA
-      to administrative support—developing a strong foundation in protocols, attention to detail, and working in
-      high-pressure environments like operating rooms.
-      After more than a decade in healthcare, I decided it was time for a change. I’ve always had a curiosity for
-      technology, so I made a career pivot. I took on a locksmith role as a stepping stone, where I gained valuable
-      experience using tools, working with precision, and understanding physical security systems. That naturally led me
-      into the low voltage field with DML Security, where I worked for six years planning and installing systems like
-      access control, surveillance, and network infrastructure. I managed wire runs, programmed IPs, maintained HOA
-      properties, and even helped train over 10 new technicians.
-      Along the way, I started to realize that my interest was evolving toward digital security. I saw how physical and
-      digital security intersect, and that inspired me to dive deeper. I completed the Google Cybersecurity Certificate
-      and a Cybersecurity course from the University of Miami to build my knowledge in IT and cybersecurity best
-      practices.
-      Unfortunately, due to a shift in management at DML, I felt my growth was limited, which pushed me to finally make
-      the full leap into the IT world. Now, I’m excited and fully prepared to take on a new role as an IT
-      professional—bringing not just technical skills, but also adaptability, discipline, and a passion for security.
-    </p>
-  </section>
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", function (event) {
+            event.stopPropagation();
 
-  <section id="goals" data-aos="slide-up">
-    <h2>Goals & Expectations</h2>
-    <p>At this stage in my career, my primary goal is continuous learning and skill development. I'm deeply committed to
-      expanding my technical expertise, particularly in cybersecurity, cloud infrastructure, and network systems. I want
-      to be in an environment where I can absorb knowledge from experienced professionals, stay updated with evolving
-      technologies, and apply what I learn to real-world challenges.
-      In the long term, I aim to use my growing skill set to help small and medium-sized businesses adopt and integrate
-      technology more effectively. I believe that with the right tools and guidance, these companies can operate more
-      securely, efficiently, and competitively. My expectation is to be part of a team that values innovation,
-      mentorship, and collaboration—where I can contribute meaningfully while continuing to grow into a strong, reliable
-      IT professional</p>
-  </section>
+            const targetId = btn.getAttribute("data-target");
+            const dropdownToToggle = document.getElementById(targetId);
 
-  <section id="tech" data-aos="slide-up">
-    <h2>Why I Like Technology</h2>
-    <p>I’ve always been fascinated by how technology shapes the world around us, and I truly believe it’s the
-      future—impacting everything from how we communicate to how we secure our most critical data. What draws me in most
-      is how fast it evolves, and how there’s always something new to learn or improve.
-      Specifically, cybersecurity and ethical hacking have become a major focus for me. I see them as some of the most
-      valuable and in-demand skills of the 21st century. As we continue to rely more on digital systems, the need to
-      protect that information becomes not just important, but essential. I love the idea of being on the front
-      lines—helping organizations stay secure, identifying vulnerabilities before bad actors do, and ensuring that
-      technology continues to serve people safely. That challenge and responsibility are what excite me most about this
-      field.</p>
-  </section>
+            // Close all dropdowns first
+            document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+              if (dropdown !== dropdownToToggle) {
+                dropdown.classList.remove("show");
+              }
+            });
 
-  <!-- Contact Section -->
-<section id="contact" data-aos="fade-up">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/mjkrdrgq" method="POST">
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone (optional)">
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
+            // Toggle the selected dropdown
+            dropdownToToggle.classList.toggle("show");
+          });
+        });
 
-  <div style="text-align: center; margin-top: 20px;">
-    <a href="https://www.linkedin.com/in/sebastian-loyacono" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="32" height="32">
-</a>
-</div>
-
-  <footer>
-    <p>&copy; 2025 Sebastian Loyacono. All rights reserved.</p>
-  </footer>
- 
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".dropbtn");
-
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
-      event.stopPropagation();
-
-      const targetId = btn.getAttribute("data-target");
-      const dropdownToToggle = document.getElementById(targetId);
-
-      // Close all dropdowns first
-      document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-        if (dropdown !== dropdownToToggle) {
-          dropdown.classList.remove("show");
-        }
+        // Close dropdowns if clicked outside
+        window.addEventListener("click", function () {
+          document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
+            dropdown.classList.remove("show");
+          });
+        });
       });
+    </script>
 
-      // Toggle the selected dropdown
-      dropdownToToggle.classList.toggle("show");
-    });
-  });
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,  // animation duration in ms
+        once: true       // animation only happens once
+      });
+    </script>
 
-  // Close dropdowns if clicked outside
-  window.addEventListener("click", function () {
-    document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-      dropdown.classList.remove("show");
-    });
-  });
-});
-</script>
-    
-  <!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,  // animation duration in ms
-    once: true       // animation only happens once
-  });
-</script>
+    <script>
+      const links = document.querySelectorAll("nav a, nav .dropbtn");
 
-<script>
-  const links = document.querySelectorAll("nav a, nav .dropbtn");
-
-  links.forEach(link => {
-    link.addEventListener("click", function () {
-      links.forEach(el => el.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-</script>
+      links.forEach(link => {
+        link.addEventListener("click", function () {
+          links.forEach(el => el.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
   </div>
 </body>
 
 </html>
- 
