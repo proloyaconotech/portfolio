@@ -47,7 +47,7 @@
 
       /* Navigation to stack vertically */
       nav {
-        flex-direction:row;
+        flex-direction:column;
         align-items: center;
         position: static;
         padding: 10px;
@@ -77,6 +77,30 @@
         padding: 6px 12px;
       }
     }
+    @media (max-width: 480px) {
+  body {
+    padding: 10px;
+    font-size: 14px; /* smaller font */
+  }
+
+  .container, .content {
+    width: 100%; /* full width */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  h1, h2, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; /* allow wrapping */
+  }
+
+  /* If you have columns, stack them vertically */
+  .columns {
+    display: block;
+    width: 100%;
+  }
+}
   </style>
   <style>
   
