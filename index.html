@@ -27,7 +27,7 @@
 
       /* Stack header content */
       header {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 20px;
@@ -47,7 +47,7 @@
 
       /* Navigation to stack vertically */
       nav {
-        flex-direction:row;
+        flex-direction: column;
         align-items: center;
         position: static;
         padding: 10px;
@@ -77,48 +77,71 @@
         padding: 6px 12px;
       }
     }
+
     @media (max-width: 480px) {
-  /* Make main containers fluid and full width */
-  .container, .content, .text-block, div {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-  }
 
-  /* Allow all text elements to wrap */
-  p, h1, h2, h3, span, a, li {
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-  }
+      /* Make all containers fluid */
+      body,
+      .container,
+      .content,
+      nav,
+      nav ul,
+      nav li,
+      p,
+      h1,
+      h2,
+      h3,
+      span,
+      a {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
 
-  /* Fix flexbox containers to wrap items */
-  .flex-container, .flexbox, .row {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    flex-direction: row !important; /* stack vertically */
-  }
+      /* Force text wrap */
+      p,
+      h1,
+      h2,
+      h3,
+      span,
+      a {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: break-word !important;
+      }
 
-  /* Shrink font size slightly */
-  body {
-    font-size: 14px !important;
-  }
+      /* Fix nav horizontal scroll */
+      nav ul {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+      }
 
-  /* Prevent images and media from overflowing */
-  img, iframe, video, embed {
-    max-width: 100% !important;
-    height: auto !important;
-  }
+      nav ul li {
+        flex: 0 0 auto !important;
+        margin-right: 10px !important;
+      }
 
-  /* Avoid fixed widths on buttons or inputs */
-  button, input, select, textarea {
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-}
+      /* Shrink font size */
+      body {
+        font-size: 14px !important;
+      }
+
+      /* Fix images/media */
+      img,
+      iframe,
+      video {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+    }
   </style>
   <style>
-  
+    
     body {
       font-family: 'Montserrat', sans-serif;
       font-weight: normal;
