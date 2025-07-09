@@ -78,27 +78,42 @@
       }
     }
     @media (max-width: 480px) {
-  body {
-    padding: 10px;
-    font-size: 14px; /* smaller font */
-  }
-
-  .container, .content {
-    width: 100%; /* full width */
-    max-width: 100%;
+  /* Make main containers fluid and full width */
+  .container, .content, .text-block, div {
+    width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box;
   }
 
-  h1, h2, p {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal; /* allow wrapping */
+  /* Allow all text elements to wrap */
+  p, h1, h2, h3, span, a, li {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 
-  /* If you have columns, stack them vertically */
-  .columns {
-    display: block;
-    width: 100%;
+  /* Fix flexbox containers to wrap items */
+  .flex-container, .flexbox, .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column !important; /* stack vertically */
+  }
+
+  /* Shrink font size slightly */
+  body {
+    font-size: 14px !important;
+  }
+
+  /* Prevent images and media from overflowing */
+  img, iframe, video, embed {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Avoid fixed widths on buttons or inputs */
+  button, input, select, textarea {
+    width: 100% !important;
+    box-sizing: border-box;
   }
 }
   </style>
