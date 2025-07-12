@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Directory Project | ProLoyaconoTech</title>
+  <link rel="stylesheet" href="assets/CSS/style_project.css" />
+</head>
+
+<body>
+  <header>
+    <h1>AD DS Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section id="ad-project" class="project">
+    <h2>Active Directory Lab Setup</h2>
+    <p class="project-summary">
+      Deployed a Windows Server 2022 Domain Controller with AD DS and DNS in a VMware virtual lab. Created a custom
+      domain (<code>loyacono.local</code>) and verified domain services via GUI and PowerShell.
+    </p>
+
+    <div class="project-gallery">
+      <figure>
+        <a href="assets/images/Windows Server .png" class="Lightbox">
+          <img src="assets/images/Windows Server .png" alt="Server Manager with ADDS Installed"></a>
+        </a>
+        <figcaption>Installed AD DS, DNS, and Remote Access roles on Windows Server 2022 using Server Manager.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="assets/images/Domain promotion.png" class="Lightbox">
+        <img src="assets/images/Domain promotion.png" alt="Domain Creation" /></a>
+        <figcaption>Promoted server to a Domain Controller, creating the domain <strong>loyacono.local</strong>.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="assets/images/Domain Verification.png" class="Lightbox">
+        <img src="assets/images/Domain Verification.png" alt="System Joined to Domain" /></a>
+        <figcaption>Verified domain membership via System Properties. The server is joined to loyacono.local.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="assets/images/Users and computers.png" class="Lightbox">
+        <img src="assets/images/Users and computers.png" alt="Active Directory Console" /></a>
+        <figcaption>ADUC showing the domain structure where users, groups, and OUs will be created and managed.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="assets/images/DNS Manager.png" class="Lightbox">
+        <img src="assets/images/DNS Manager.png" alt="DNS Manager" /></a>
+        <figcaption>DNS forward lookup zone configured for domain-based name resolution.</figcaption>
+      </figure>
+
+      <figure>
+        <a href="assets/images/PS ADDomain.png" class="Lightbox">
+        <a href="assets/images/ADForest.png" class="Lightbox">    
+        <img src="assets/images/PS ADDomain.png" />
+        <img src="assets/images/ADForest.png" alt="Power Shell Verification" /></a>
+        <figcaption>Used PowerShell to verify domain and forest configuration. Domain is fully operational and replicating properly.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sebastian Loyacono</p>
+  </footer>
+  <script>
+  // Basic Lightbox Viewer
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".project-gallery img");
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        const overlay = document.createElement("div");
+        overlay.className = "lightbox-overlay";
+        overlay.innerHTML = `
+          <div class="lightbox-container">
+            <img src="${img.src}" alt="${img.alt}">
+          </div>`;
+        document.body.appendChild(overlay);
+        overlay.addEventListener("click", () => overlay.remove());
+      });
+    });
+  });
+</script>
+</body>
+</html>
