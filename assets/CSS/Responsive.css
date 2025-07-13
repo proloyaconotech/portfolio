@@ -1,0 +1,56 @@
+ @media screen and (max-width: 768px) {
+
+      /* Stack header content */
+      header {
+        margin-right: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header h1,
+      header h3 {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      header img.profile-pic {
+        width: 100px;
+        height: 100px;
+        margin: 10px 0;
+      }
+
+      /* Navigation to stack vertically */
+      nav {
+        margin-bottom: 20px;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      nav a,
+      .dropbtn {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+
+      /* Sections shrink padding */
+      section {
+        padding: 20px;
+        margin: 10px;
+        width: 100%;
+      }
+
+      #contact {
+        padding: 20px;
+        margin: 20px 10px;
+      }
+
+      .download-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }

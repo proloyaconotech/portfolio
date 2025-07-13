@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -10,398 +10,17 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="apple-touch-icon" href="assets/images/Initials Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    section {
-      background-color: rgba(27, 26, 26, 0.4);
-      padding: 40px;
-      border-radius: 12px;
-      color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(19, 17, 17, 0.9);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: white;
-    }
-
-    @media screen and (max-width: 768px) {
-
-      /* Stack header content */
-      header {
-        margin-right: 30px;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 20px;
-      }
-
-      header h1,
-      header h3 {
-        text-align: center;
-        font-size: 18px;
-      }
-
-      header img.profile-pic {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0;
-      }
-
-      /* Navigation to stack vertically */
-      nav {
-        margin-bottom: 20px;
-        flex-direction: column;
-        align-items: center;
-        position: static;
-        padding: 10px;
-        gap: 10px;
-      }
-
-      nav a,
-      .dropbtn {
-        font-size: 14px;
-        padding: 8px 12px;
-      }
-
-      /* Sections shrink padding */
-      section {
-        padding: 20px;
-        margin: 10px;
-        width: 100%;
-      }
-
-      #contact {
-        padding: 20px;
-        margin: 20px 10px;
-      }
-
-      .download-btn {
-        font-size: 14px;
-        padding: 6px 12px;
-      }
-    }
-
-  </style>
-  <style>
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: normal;
-      background-color: #d4d2d2;
-      color: #000000;
-      padding: 20px;
-    }
-
-    .download-btn {
-      display: inline-block;
-      padding: 4px 10px;
-      background-color: #48484b;
-      font-weight: bold;
-      color: white;
-      text-decoration: floralwhite;
-      border-radius: 5px;
-      margin-top: 0;
-    }
-
-    .download-btn:hover {
-      background-color: #4a8a7b;
-      transform: scale(1.05);
-
-    }
-
-    body {
-
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-image: url('assets/images/background4.jpeg');
-      background-color: rgba(0, 0, 0, 0.6);
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.4);
-      /* This lowers contrast */
-      padding: 20px;
-      min-height: 100vh;
-    }
-
-    header {
-      background: none;
-      display: flex;
-      justify-content: flex-end;
-      align-items: left;
-      padding: 40px 20px;
-      gap: 15px;
-      position: relative;
-      z-index: 100;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px 40px;
-      background: none;
-      /* remove background image */
-    }
-
-    header h1 {
-      font-size: 36px;
-      font-weight: 700;
-      color: #fff;
-      margin: 0;
-    }
-
-    header img.profile-pic {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 10xp0;
-    }
-
-    header h3 {
-      font-size: 16px;
-      font-weight: 400;
-      color: #ccc;
-      margin: 0;
-    }
-
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      background: transparent;
-      z-index: 1000;
-    }
-
-    nav a,
-    .dropbtn {
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 10px 12px;
-      transition: all 0.3s ease;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    nav a:hover,
-    .dropbtn:hover {
-      font-style: bold;
-    }
-
-    nav a.active,
-    .dropbtn.active {
-      font-weight: bold;
-    }
-
-    /* Keep dropdown positioned under buttons */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      left: auto;
-    }
-
-    .dropdown {
-      display: inline-block;
-      position: relative;
-    }
-
-    .dropbtn {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 10px 15px;
-      cursor: pointer;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #444;
-      min-width: 200px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      text-align: left;
-      top: 100%;
-      left: 0;
-      border-radius: 5px;
-    }
-
-    .dropdown-content a {
-      color: rgb(255, 255, 255);
-      padding: 10px 16px;
-      font-size: small;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #555;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(243, 241, 241, 0.85);
-      color: #111;
-      background: rgba(255, 255, 255, 0.30);
-      text-shadow: 1px 1px 3px rgba(78, 73, 73, 0.3);
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    #contact {
-      background-color: rgba(78, 73, 73, 0.3);
-      padding: 40px;
-      border-radius: 16px;
-      margin-top: 80px;
-      margin-bottom: 60px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-    }
-
-    #contact h2 {
-      color: #c9c1c1;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-      border-bottom: 5px solid #1a1a1a;
-      padding-bottom: 10px;
-    }
-
-    #contact form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    #contact input,
-    #contact textarea {
-      padding: 12px 16px;
-      border: none;
-      border-radius: 8px;
-      background-color: #1e1e1e;
-      color: #fff;
-      font-size: 1rem;
-      outline: none;
-      box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
-    }
-
-    #contact button {
-      padding: 12px;
-      background-color: #00aaff;
-      color: rgb(255, 255, 255);
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    #contact button:hover {
-      background-color: #008fcc;
-      transform: scale(1.03);
-    }
-
-    h2 {
-      color: #c9c1c1;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-      border-bottom: 5px solid #1a1a1a;
-      padding-bottom: 10px;
-    }
-
-    .nested-dropdown {
-      position: relative;
-    }
-
-    .nested-dropdown>span {
-      display: block;
-      padding: 12px 16px;
-      cursor: pointer;
-      white-space: nowrap;
-      color: #f0f0f0;
-    }
-
-    .nested-dropdown-content {
-      display: none;
-      position: absolute;
-      left: 100%;
-      top: 0;
-      background-color: #f9f9f9;
-      min-width: 200px;
-      box-shadow: 0px 8px 16px rgba(248, 247, 247, 0.2);
-      z-index: 1;
-    }
-
-    .nested-dropdown:hover .nested-dropdown-content {
-      display: block;
-    }
-
-    .nested-dropdown-content a {
-      padding: 12px 16px;
-      display: block;
-      text-decoration: none;
-      color: rgb(255, 255, 255);
-      background-color: #353333;
-    }
-
-    .nested-dropdown-content a:hover {
-      background-color: #070707;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      color: white;
-      margin-top: 40px;
-    }
-
-    .projects ul {
-      padding-left: 20px;
-    }
-
-    .projects li {
-      margin-bottom: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/CSS/Home.css">
+  <link rel="stylesheet" href="assets/CSS/Responsive.css">
 </head>
 
 <body>
   <div class="overlay">
-    <style>
-      /* Class to toggle visibility */
-      .show {
-        display: block;
-      }
-    </style>
-
+    
     <header>
       <h1>Sebastian Loyacono</h1>
       <h3>Cybersecurity Graduate | Technician | IT Enthusiast</h3>
-      <img src="assets/images/Proffessional pic.jpg" alt="Profile Photo" class="profile-pic" />
+      <img src="assets/images/Professional pic.jpg" alt="Profile Photo" class="profile-pic" />
     </header>
 
     <nav>
@@ -409,7 +28,7 @@
 
 
       <div class="dropdown">
-        <button data-target="projectDropdown" class="dropbtn">Projects ▾</button>
+        <button data-target="projectDropdown" class="dropbtn">Projects</button>
         <div class="dropdown-content" id="projectDropdown">
           <a href="assets/PDF/Pigs Rule.pdf" title="Snort PDF Report" target="_blank"><i
               class="fa-solid fa-network-wired"></i> Snort</a>
@@ -419,17 +38,17 @@
               class="fa-solid fa-network-wired"></i> Achievment Report </a>
           <a href="Microsoft project.html" title="AD DS Project" target="_blank"><i
               class="fa-solid fa-users"></i> ADDS project </a>
-          <!-- Add more links to your project pages here -->
+          
         </div>
       </div>
 
-      <!-- Certifications Dropdown -->
+      
       <div class="dropdown">
-        <button data-target="certDropdown" class="dropbtn">Certifications ▾</button>
+        <button data-target="certDropdown" class="dropbtn">Certifications </button>
         <div class="dropdown-content" id="certDropdown">
           <a href="cert-google.html" target="_blank"><i class="fa-solid fa-shield-halved"></i> Google Cybersecurity</a>
           <div class="nested-dropdown">
-            <span><i class="fa-brands fa-microsoft"></i> Microsoft ▸</span>
+            <span><i class="fa-brands fa-microsoft"></i> Microsoft </span>
             <div class="nested-dropdown-content">
               <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/a4j4w6g7"
                 target="_blank">
@@ -440,16 +59,13 @@
               <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/jughjb4t" target="_blank">AZ-104: Prerequisites for Azure administrators</a>
               <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/8zymxpjw" target="_blank">Microsoft Azure Fundamentals</a>
               <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/nvaqkgkf" target="_blank">MS-900 Microsoft 365 Fundamentals: Describe Microsoft 365 pricing</a>
-              <!-- Add more Microsoft badges here -->
-              <!--
-        <a href="YOUR-LINK-HERE" target="_blank">SC-900</a>
-        -->
+              
             </div>
           </div>
         </div>
       </div>
 
-      <a href="assets/PDF/Sebastian_Loyacono_Resume.pdf" download class="download-btn">Download My Resume</a>
+      <a href="assets/PDF/Sebastian_Loyacono_Resume.pdf" download class="download-btn">Resume</a>
     </nav>
 
     <section id="about" data-aos="slide-up">
@@ -535,7 +151,7 @@
       </form>
     </section>
 
-    <div style="text-align: center; margin-top: 20px;">
+    <div class="linkedin-icon-wrapper">
       <a href="https://www.linkedin.com/in/sebastian-loyacono" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn"
           width="32" height="32">
@@ -545,59 +161,11 @@
     <footer>
       <p>&copy; 2025 Sebastian Loyacono. All rights reserved.</p>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll(".dropbtn");
-
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", function (event) {
-            event.stopPropagation();
-
-            const targetId = btn.getAttribute("data-target");
-            const dropdownToToggle = document.getElementById(targetId);
-
-            // Close all dropdowns first
-            document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-              if (dropdown !== dropdownToToggle) {
-                dropdown.classList.remove("show");
-              }
-            });
-
-            // Toggle the selected dropdown
-            dropdownToToggle.classList.toggle("show");
-          });
-        });
-
-        // Close dropdowns if clicked outside
-        window.addEventListener("click", function () {
-          document.querySelectorAll(".dropdown-content").forEach((dropdown) => {
-            dropdown.classList.remove("show");
-          });
-        });
-      });
-    </script>
-
-    <!-- AOS JS -->
+ <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,  // animation duration in ms
-        once: true       // animation only happens once
-      });
-    </script>
-
-    <script>
-      const links = document.querySelectorAll("nav a, nav .dropbtn");
-
-      links.forEach(link => {
-        link.addEventListener("click", function () {
-          links.forEach(el => el.classList.remove("active"));
-          this.classList.add("active");
-        });
-      });
-    </script>
+    
   </div>
+  <script src="assets/JS/scripts.js" defer></script>
 </body>
 
 </html>
