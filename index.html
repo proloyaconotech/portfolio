@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="assets/images/Initials Logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/CSS/Home.css">
-  <link rel="stylesheet" href="assets/CSS/Responsive.css">
+  
 </head>
 
 <body>
@@ -25,49 +25,11 @@
 
     <nav>
       <a href="#about">About</a>
-
-
-      <div class="dropdown">
-        <button data-target="projectDropdown" class="dropbtn">Projects</button>
-        <div class="dropdown-content" id="projectDropdown">
-          <a href="assets/PDF/Pigs Rule.pdf" title="Snort PDF Report" target="_blank"><i
-              class="fa-solid fa-network-wired"></i> Snort</a>
-          <a href="assets/PDF/Imperial memory.pdf" title="Memory Forensics PDF Report" target="_blank"><i
-              class="fa-solid fa-memory"></i> Memory Forensics</a>
-          <a href="assets/PDF/achievement-report (3).pdf" title="School Graph Report" target="_blank"><i
-              class="fa-solid fa-network-wired"></i> Achievment Report </a>
-          <a href="Microsoft project.html" title="AD DS Project" target="_blank"><i
-              class="fa-solid fa-users"></i> ADDS project </a>
-          
-        </div>
-      </div>
-
-      
-      <div class="dropdown">
-        <button data-target="certDropdown" class="dropbtn">Certifications </button>
-        <div class="dropdown-content" id="certDropdown">
-          <a href="cert-google.html" target="_blank"><i class="fa-solid fa-shield-halved"></i> Google Cybersecurity</a>
-          <div class="nested-dropdown">
-            <span><i class="fa-brands fa-microsoft"></i> Microsoft </span>
-            <div class="nested-dropdown-content">
-              <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/a4j4w6g7"
-                target="_blank">
-                AZ-500: Secure compute, storage, and databases
-              </a>
-              <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/bc3pa44d" target="_blank">AZ-500: Secure networking</a>
-              <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/4gthg9ek" target="_blank">MS-900 Microsoft 365 Fundamentals</a>
-              <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/jughjb4t" target="_blank">AZ-104: Prerequisites for Azure administrators</a>
-              <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/8zymxpjw" target="_blank">Microsoft Azure Fundamentals</a>
-              <a href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/nvaqkgkf" target="_blank">MS-900 Microsoft 365 Fundamentals: Describe Microsoft 365 pricing</a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
       <a href="assets/PDF/Sebastian_Loyacono_Resume.pdf" download class="download-btn">Resume</a>
     </nav>
-
+    
     <section id="about" data-aos="slide-up">
       <h2>Who am I</h2>
       <p>I'm a highly motivated cybersecurity graduate currently making a transition into the IT industry. I come from a
@@ -138,6 +100,69 @@
         technology continues to serve people safely. That challenge and responsibility are what excite me most about
         this
         field.</p>
+    </section>
+
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <a class="card" href="assets/PDF/Pigs Rule.pdf" target="_blank">
+          <i class="fa-solid fa-network-wired fa-2x"></i>
+          <div class="card-title">Snort</div>
+          <div class="card-desc">Snort PDF Report</div>
+        </a>
+        <a class="card" href="assets/PDF/Imperial memory.pdf" target="_blank">
+          <i class="fa-solid fa-memory fa-2x"></i>
+          <div class="card-title">Memory Forensics</div>
+          <div class="card-desc">Memory Forensics PDF Report</div>
+        </a>
+        <a class="card" href="assets/PDF/achievement-report (3).pdf" target="_blank">
+          <i class="fa-solid fa-chart-column fa-2x"></i>
+          <div class="card-title">Achievement Report</div>
+          <div class="card-desc">School Graph Report</div>
+        </a>
+        <a class="card" href="Microsoft project.html" target="_blank">
+          <i class="fa-solid fa-users fa-2x"></i>
+          <div class="card-title">ADDS Project</div>
+          <div class="card-desc">Active Directory Domain Services</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" data-aos="fade-up">
+      <h2>Certifications</h2>
+      <div class="card-grid">
+        <a class="card" href="cert-google.html" target="_blank">
+          <i class="fa-solid fa-shield-halved fa-2x"></i>
+          <div class="card-title">Google Cybersecurity</div>
+        </a>
+        <a class="card" href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/a4j4w6g7" target="_blank">
+          <i class="fa-brands fa-microsoft fa-2x"></i>
+          <div class="card-title">AZ-500: Secure compute, storage, and databases</div>
+        </a>
+        <a class="card" href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/bc3pa44d" target="_blank">
+          <i class="fa-brands fa-microsoft fa-2x"></i>
+          <div class="card-title">AZ-500: Secure networking</div>
+        </a>
+        <a class="card" href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/4gthg9ek" target="_blank">
+          <i class="fa-brands fa-microsoft fa-2x"></i>
+          <div class="card-title">MS-900 Microsoft 365 Fundamentals</div>
+        </a>
+        <a class="card" href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/jughjb4t" target="_blank">
+          <i class="fa-brands fa-microsoft fa-2x"></i>
+          <div class="card-title">AZ-104: Prerequisites for Azure administrators</div>
+        </a>
+        <a class="card" href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/8zymxpjw" target="_blank">
+          <i class="fa-brands fa-microsoft fa-2x"></i>
+          <div class="card-title">Microsoft Azure Fundamentals</div>
+        </a>
+        <a class="card" href="https://learn.microsoft.com/en-us/users/loyacono-2149/achievements/nvaqkgkf" target="_blank">
+          <i class="fa-brands fa-microsoft fa-2x"></i>
+          <div class="card-title">MS-900 Microsoft 365 Fundamentals: Describe Microsoft 365 pricing</div>
+        </a>
+      </div>
     </section>
 
     <!-- Contact Section -->
