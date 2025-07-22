@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Directory Project | ProLoyaconoTech</title>
+  <link rel="stylesheet" href="assets/CSS/style_project.css" />
+</head>
+
+<body>
+  <header>
+    <h1>AD DS Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <section id="ad-project" class="project">
+    <h2>Active Directory with Network Traffic Analysis</h2>
+    <p class="project-summary">
+      This project simulates a real-world enterprise environment using virtual machines, Active Directory, and pfSense routing.
+     It demonstrates my ability to configure multi-site domain controllers, enforce Group Policy, and monitor network behavior using Wireshark.
+     Technologies used: VMware Workstation Pro, Windows Server 2022, pfSense (firewall/router), Windows 11 Pro (domain-joined client), Wireshark (packet analysis)
+    </p>
+
+
+    <div class="project-gallery">
+      <figure>
+        <img src="assets/images/2.1 Network structure using pfsense.png" alt="Network Structure using pfSense" />
+        <figcaption>Network structure using pfSense for routing and traffic analysis.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.2 pfsense CLI.png" alt="PfSense CLI" />
+        <figcaption>Configured pfSense interfaces to segment LAN-HQ and LAN-BR using VMware LAN segments. WAN interface connected via NAT to provide internet routing to both networks.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.2pfSense GUI.png" alt="PfSense GUI" />
+        <figcaption>Configured pfSense GUI for traffic monitoring and management.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.3 pfSense DHCP dynamic assigment.png" alt="PfSense DHCP Dynamic Assignment" />
+        <figcaption>Enabled DHCP on the BR subnet to dynamically assign IPs to clients on the branch network.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.4 Network for DC-HQ.png" alt="Network for DC-HQ" />
+        <figcaption>Configured a static IP (192.168.10.10) on DC-HQ and installed the DNS Server role. Forward lookup zones for _msdcs.loyacono.local and loyacono.local were automatically created during AD installation, enabling name resolution for domain-joined devices.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.4 DNS Manager Zone.png" alt="DNS Manager" />
+        <figcaption>Configured a static IP (192.168.10.10) on DC-HQ and installed the DNS Server role. Forward lookup zones for _msdcs.loyacono.local and loyacono.local were automatically created during AD installation, enabling name resolution for domain-joined devices.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.5 Promotion to a Domain Controller.png" alt="Promotion to Domain Controller" />
+        <figcaption>Verified DC-BR as an additional domain controller under loyacono.local. Presence confirmed via Active Directory Sites and Services and Server Manager. Replication tested using repadmin, confirming successful directory synchronization with DC-HQ.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.5 Replication summary.png" alt="Replication Summary" />
+        <figcaption>Promoted DC-BR to replicate from DC-HQ, completing the multi-site domain controller setup with replication over pfSense.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.6 Active Directory Users and Computers.png" alt="Active Directory Users and Computers" />
+        <figcaption>Created organizational units and joined a Windows 11 client to the domain. Verified replication and object visibility from both DCs.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.7 GPO Creation.png" alt="GPO Creation" />
+        <figcaption>Created Group Policy Objects (GPOs) to enforce security settings and software installation on domain-joined clients.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.8 workstation logon.png" alt="Workstation Logon" />
+        <figcaption>Tested workstation logon for domain-joined clients, verifying GPO application and user authentication.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="assets/images/2.8 client added to domain.png" alt="Client Added to Domain" />
+        <figcaption>Successfully joined Windows 11 client to the loyacono.local domain via DC-BR. Verified user logon with GPO applied.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sebastian Loyacono</p>
+  </footer>
+
+  <script src="assets/JS/scriptsprojects.js"></script>
+
+</body>
+</html>
